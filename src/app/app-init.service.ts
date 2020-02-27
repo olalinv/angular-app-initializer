@@ -20,7 +20,11 @@ export class AppInitService {
         });
       setTimeout(() => {
         console.log("AppInitService Finished: " + str);
-        resolve();
+        if (str === "hello") {
+          resolve();
+        } else {
+          reject();
+        }
       }, 6000);
     });
   }
